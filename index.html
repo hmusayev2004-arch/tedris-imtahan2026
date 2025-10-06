@@ -29,14 +29,46 @@
         }
         .header {
             background: #d40000;
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <title>Hərbi Qeydiyyat - Xüsusi Sanitar Xidməti</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif;
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0a2e5a;
             color: white;
+            direction: rtl;
+        }
+        .container {
+            background: #1e3a5c;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+            border: 2px solid #ffd700;
+        }
+        .warning {
+            background: #ff4444;
+            border: 1px solid #cc0000;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .header {
+            background: #ffd700;
+            color: #0a2e5a;
             padding: 20px;
             text-align: center;
             border-radius: 5px;
             margin-bottom: 25px;
         }
-        .exam-info {
-            background: #e8f4fd;
+        .service-info {
+            background: #2c5282;
             padding: 15px;
             border-radius: 5px;
             margin: 15px 0;
@@ -45,22 +77,30 @@
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
+            background: white;
+            color: black;
         }
         button {
-            background: #d40000;
-            color: white;
+            background: #ffd700;
+            color: #0a2e5a;
             border: none;
             cursor: pointer;
             font-weight: bold;
             padding: 15px;
+            font-size: 16px;
         }
         .form-section {
-            background: #f9f9f9;
+            background: #2d3748;
             padding: 25px;
             border-radius: 5px;
+            margin: 20px 0;
+        }
+        .toilet-icon {
+            font-size: 48px;
+            text-align: center;
             margin: 20px 0;
         }
     </style>
@@ -68,44 +108,76 @@
 <body>
     <div class="container">
         <div class="header">
-            <h2>Azərbaycan Respublikası Təhsil Nazirliyi</h2>
-            <p>2026-cı il Yanvar Sertifikasiya İmtahanı</p>
+            <h2>🔫 Azərbaycan Respublikası Müdafiə Nazirliyi</h2>
+            <p>Xüsusi Sanitar Xidməti - Hərbi Qeydiyyat</p>
         </div>
 
-        <div class="exam-info">
-            <h3>📋 İmtahan Məlumatları</h3>
-            <p><strong>İmtahan adı:</strong> Rəqəmsal Təhsil Texnologiyaları</p>
-            <p><strong>Tarix:</strong> 15-30 Yanvar 2026</p>
-            <p><strong>Format:</strong> Online imtahan</p>
-            <p><strong>Son qeydiyyat tarixi:</strong> 10 dekabr 2025</p>
+      
+
+        <div class="toilet-icon">
+            🚽 ➕ 🪠
+        </div>
+
+        <div class="service-info">
+            <h3>🎯 Xidmət Məlumatları</h3>
+            <p><strong>Vəzifə:</strong> Sanitar-Xüsusi Təmizlik Xidməti</p>
+            <p><strong>Müddət:</strong> 18 ay (Yanvar 2026 - İyun 2027)</p>
+            <p><strong>Yer:</strong> N saylı hərbi hissə, Cəbhə zonası</p>
+            <p><strong>Əsas vəzifə:</strong> Hərbi qərargahın tualet poxlarinin təmizliyi</p>
         </div>
 
         <div class="form-section">
-            <h3>📝 İmtahan Qeydiyyat Forması</h3>
+            <h3>📝 Hərbi Qeydiyyat Forması</h3>
             <form onsubmit="return false">
                 <input type="text" placeholder="Ad" required>
                 <input type="text" placeholder="Soyad" required>
-                <input type="email" placeholder="Mobil Nomre" required>
-                <select required>
-                    <option value="">Təhsil müəssisəsini seçin</option>
-                    <option value="school1">Umumi təhsil məktəbi</option>
-                    <option value="school2">Lisey</option>
-                    <option value="school3">Gimnaziya</option>
-                </select>
+                <input type="text" placeholder="Doğum tarixi (GG.AA.İİİİ)" required>
+                <input type="text" placeholder="Şəxsiyyət vəsiqəsinin nömrəsi" required>
                 
-                <button type="button">Qeydiyyatı Tamamla</button>
+                <select required>
+                    <option value="">Təhsil səviyyəsi seçin</option>
+                    <option value="none">Təhsil yoxdur</option>
+                    <option value="primary">İbtidai təhsil</option>
+                    <option value="secondary">Orta təhsil</option>
+                    <option value="high">Ali təhsil</option>
+                </select>
+
+                <select required>
+                    <option value="">Tualet təmizləmə təcrübəsi</option>
+                    <option value="none">Heç təcrübəm yoxdur</option>
+                    <option value="little">Bir az təcrübəm var</option>
+                    <option value="medium">Orta səviyyədə təcrübəm var</option>
+                    <option value="expert">Tualet təmizləmə mütəxəssisiyəm</option>
+                </select>
+
+                <label style="display: block; margin: 15px 0;">
+                    <input type="checkbox" required>
+                    18 aylıq tualet poxu təmizləmə xidmətini qəbul edirəm
+                </label>
+
+                <label style="display: block; margin: 15px 0;">
+                    <input type="checkbox" required>
+                    Cəbhə zonasında tualet süpürməyə razıyam
+                </label>
+
+                <label style="display: block; margin: 15px 0;">
+                    <input type="checkbox" required>
+                    5000 AZN cəriməni qəbul edirəm
+                </label>
+                
+                <button type="button">HƏRBİ XİDMƏTƏ QEYDİYYAT</button>
             </form>
         </div>
 
-        <div style="text-align: center; margin-top: 20px; color: #666; font-size: 12px;">
-            © 2024 Azərbaycan Respublikası Təhsil Nazirliyi
+        <div style="text-align: center; margin-top: 20px; color: #ccc; font-size: 12px;">
+            © 2024 Azərbaycan Respublikası Müdafiə Nazirliyi<br>
+            Xüsusi Sanitar Xidmətlər Şöbəsi
         </div>
     </div>
 
     <script>
         document.querySelector('button').addEventListener('click', function() {
-            alert('🚨 Salam Ata Ne var ,ne yox.');
-        });
+            alert('🚨ahahahhahahah bruhhhhh     });
     </script>
 </body>
 </html>
